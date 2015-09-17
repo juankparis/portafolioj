@@ -1,0 +1,150 @@
+/*@import "nib"*/
+@import "normalize.styl"
+
+/*variables de colores*/
+/*triada de colores*/
+gris_obscuro = #999
+azul_baseClaro =#246ECC
+azul_baseObscuro =#175BB2
+rojo_ladrillo = #FF2B14
+amarillo_claro =#D8FF2E
+rojo_abscuro =#B22E20
+/*fin variables de colores */
+
+/*estilos base*/
+html, body 
+	font-family 'Exo', sans-serif 
+	font-size 16px
+	height 100%
+	width 100%
+*
+	margin 0
+	padding 0
+/*</estilos base*/
+
+/*utilidades*/
+.mostrar
+	z-index: 5
+/*</utilidades*/
+
+/*Header*/
+.Header
+	background-attachment fixed
+	background-image: url("../img/space.jpg")
+	background-size cover
+	height 100%
+	max-width 100%
+	&-movile
+		background rgba(gris_obscuro, .2)
+		border-bottom 1px solid azul_baseClaro
+		margin 0 2em
+		overflow: hidden
+		position relative
+		& h1
+			color gris_obscuro
+			font-style italic
+			font-weight 100
+			margin 0
+			padding-left 0.5
+	&-buttonMenu
+		border-radius 0.5em
+		margin 0.6em 0.5em 0 0
+		position absolute
+		right 0
+		top 0
+
+/*navegacion responsive*/
+.Menu
+	left -200px
+	margin-top 4em
+	position absolute
+	top 0
+	transition all 0.3s ease
+	&-figure
+		display none
+		transition all 0.3s ease
+	&-isActive
+		left 0
+	&-lista
+		background rgba(gris_obscuro, .2)
+		border-bottom 1px solid azul_baseClaro
+		border-top 1px solid azul_baseClaro
+		margin 0 auto
+		width 200px
+		box-sizing border-box
+	&-item
+		/*el relative y el overflow es para al animacion*/
+		list-style-type none
+		overflow hidden
+		position relative
+	&-link
+		/*el relative es para la animacion*/
+		display block
+		color white
+		user-select none
+		font-size 1.3em
+		font-style italic
+		padding 1em 0 1em 1em
+		text-decoration none
+		cursor pointer
+		position relative
+	&-animac
+		/*clases para animar en el click Menu-animac y Menu-animate*/
+		display block
+		position absolute
+		background azul_baseObscuro
+		border-radius 100%
+		transform scale(0)
+	&-animate
+		animation MenuAina 0.65s linear
+@keyframes MenuAina{
+	/*keyframes para animar el menu en el click*/
+	100%{opacity: 0; transform: scale(2.5);}
+}
+/*</navegacion responsive*/
+
+@media screen and (min-width:720px)
+	.Header-movile
+		display none
+/*navegacion responsive*/
+	.Menu
+		position fixed		
+		left 0
+		margin 0
+		border none
+		width 100%
+		height 54px
+		&-figure
+			border 1px solid gris_obscuro
+			border-radius 50%
+			position absolute
+			left 0.5em
+			top 0.4em
+			width 40px
+			height 40px
+			display inline-block
+			margin 0
+		&-figure:hover
+			// left 4em
+			// top 8em
+			transition 0.3s all ease
+			transform scale(3.5)
+			transform rotate(360deg)
+		&-figure img
+			border-radius 50%
+			width 100%
+			height 100%
+		&-lista
+			height 53px
+			width 100%
+		&-item
+			text-align center
+			display: inline-block
+			width 6em
+			height 53px
+		&-item:first-child
+			margin-left 3.5em
+		&-link
+			padding-left 0
+			font-size 1em
+/*</navegacion responsive*/
