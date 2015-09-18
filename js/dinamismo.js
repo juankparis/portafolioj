@@ -29,12 +29,14 @@ $(function(){
 	
 	if(!Menulink.height() && !Menulink.width()){
 		//utilizar el ancho y altura que sea mayor al diametro para hecer un circulo que pueda cubrir todo el elemento
+		//Reciben un objeto jQuery y devuelven las dimensiones externas del primer elemento de dicho objeto jQuery recibido por parámetro, esto es, la anchura y altura respectivamente del elemento contando el padding del elemento y su borde.
 		diametro = Math.max(pariente.outerWidth(), pariente.outerHeight());
 		Menulink.css({height: diametro, width: diametro});
 	}
-	
+
 	//se obtiene las cordenadas del los clicks  
-	//click coordina relativa a la página de los padres en posición relativa a la página, un medio de auto altura y anchura para que sea controlable desde el centro
+	//devuelven la posición de un elemento en la página. Reciben un objeto jQuery y devuelven la localización del primer elemento que haya en ese objeto jQuery. La posición siempre se indica como valor de retorno del método por medio de un objeto que tiene dos atributos, "top" y "left", indicando los píxeles que está separado de la esquina superior izquerda del documento. 
+	//offset() indica la posición del elemento real, teniendo en cuenta los márgenes del elemento,
 	x = e.pageX - pariente.offset().left - Menulink.width()/2;
 	y = e.pageY - pariente.offset().top - Menulink.height()/2;
 	

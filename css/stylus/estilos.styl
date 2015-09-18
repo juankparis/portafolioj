@@ -79,7 +79,7 @@ html, body
 		position relative
 	&-link
 		/*el relative es para la animacion*/
-		display block
+		display inline-block
 		color white
 		user-select none
 		font-size 1.3em
@@ -87,6 +87,7 @@ html, body
 		padding 1em 0 1em 1em
 		text-decoration none
 		cursor pointer
+		width 100%
 		position relative
 	&-animac
 		/*clases para animar en el click Menu-animac y Menu-animate*/
@@ -106,7 +107,7 @@ html, body
 @media screen and (min-width:720px)
 	.Header-movile
 		display none
-/*navegacion responsive*/
+	/*navegacion responsive*/
 	.Menu
 		position fixed		
 		left 0
