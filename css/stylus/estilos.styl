@@ -2,8 +2,9 @@
 @import "normalize.styl"
 
 /*variables de colores*/
-/*triada de colores*/
+gris_obscuro_a = hsl(240, 5%, 16%)
 gris_obscuro = #999
+/*triada de colores*/
 azul_baseClaro =#246ECC
 azul_baseObscuro =#175BB2
 rojo_ladrillo = #FF2B14
@@ -13,8 +14,10 @@ rojo_abscuro =#B22E20
 
 /*estilos base*/
 html, body 
+	background gris_obscuro_a
 	font-family 'Exo', sans-serif 
 	font-size 16px
+	color white
 	height 100%
 	width 100%
 *
@@ -40,12 +43,12 @@ html, body
 		margin 0 2em
 		overflow: hidden
 		position relative
-		& h1
-			color gris_obscuro
-			font-style italic
-			font-weight 100
-			margin 0
-			padding-left 0.5
+	&-title
+		color gris_obscuro
+		font-style italic
+		font-weight 100
+		margin 0
+		padding-left 0.5
 	&-buttonMenu
 		border-radius 0.5em
 		margin 0.6em 0.5em 0 0
@@ -66,12 +69,14 @@ html, body
 	&-isActive
 		left 0
 	&-lista
-		background rgba(gris_obscuro, .2)
+		background gris_obscuro_a
 		border-bottom 1px solid azul_baseClaro
 		border-top 1px solid azul_baseClaro
+		// border-radius 0.5em
+		box-sizing border-box
 		margin 0 auto
 		width 200px
-		box-sizing border-box
+		position fixed
 	&-item
 		/*el relative y el overflow es para al animacion*/
 		list-style-type none
@@ -79,22 +84,22 @@ html, body
 		position relative
 	&-link
 		/*el relative es para la animacion*/
-		display inline-block
 		color white
-		user-select none
-		font-size 1.3em
+		cursor pointer
+		display inline-block
+		font-size 1em
 		font-style italic
 		padding 1em 0 1em 1em
-		text-decoration none
-		cursor pointer
-		width 100%
 		position relative
+		text-decoration none
+		user-select none
+		width 100%
 	&-animac
 		/*clases para animar en el click Menu-animac y Menu-animate*/
-		display block
-		position absolute
 		background azul_baseObscuro
 		border-radius 100%
+		display block
+		position absolute
 		transform scale(0)
 	&-animate
 		animation MenuAina 0.65s linear
@@ -104,48 +109,93 @@ html, body
 }
 /*</navegacion responsive*/
 
+/*Avatar*/
+.Avatar
+	padding-top 2em
+	font-style italic
+	font-weight 100
+	width 100%
+	&-figure
+		border: 1px solid azul_baseClaro
+		border-radius 50%
+		margin 0 auto
+		margin-bottom 0.5em
+		width 150px
+		height 150px
+		img
+			border-radius 50%
+			height 150px
+			width 150px
+	&-info
+		margin 0 auto
+		text-align center
+	&-perfil
+		display none
+	&-lema
+		margin 1em 0.5em 0 0.5em
+/*</Avatar*/
+
+
 @media screen and (min-width:720px)
 	.Header-movile
 		display none
 	/*navegacion responsive*/
 	.Menu
-		position fixed		
+		border none
+		height 54px
 		left 0
 		margin 0
-		border none
+		position fixed		
 		width 100%
-		height 54px
 		&-figure
 			border 1px solid gris_obscuro
 			border-radius 50%
-			position absolute
+			display inline-block
+			height 40px
 			left 0.5em
+			margin 0
+			position absolute
 			top 0.4em
 			width 40px
-			height 40px
-			display inline-block
-			margin 0
 		&-figure:hover
 			// left 4em
 			// top 8em
-			transition 0.3s all ease
-			transform scale(3.5)
 			transform rotate(360deg)
+			//transform scale(3.5)
+			transition 0.3s all ease
 		&-figure img
 			border-radius 50%
-			width 100%
 			height 100%
+			width 100%
 		&-lista
 			height 53px
 			width 100%
 		&-item
-			text-align center
 			display: inline-block
-			width 6em
 			height 53px
+			text-align center
+			width 6em
 		&-item:first-child
 			margin-left 3.5em
 		&-link
-			padding-left 0
 			font-size 1em
-/*</navegacion responsive*/
+			padding-left 0
+	/*</navegacion responsive*/
+	/*Avatar*/
+
+	/*</Avatar*/
+	.Avatar
+		&-figure
+			display none
+		&-info
+			font-size 2em
+			margin 3em 0 0 2em
+			text-align left
+		&-perfil
+			display block
+			font-weight 100
+			color gris_obscuro
+		&-lema
+			margin 2em 0.5em 0 2em 
+			max-width 28em
+			font-size 1rem
