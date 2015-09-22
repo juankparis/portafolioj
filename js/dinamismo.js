@@ -1,4 +1,10 @@
 $(function(){
+	//gestos touch
+	var $body = document.querySelector("body");
+	var body = new Hammer($body);
+
+	body.on("panright", menuAbrir);
+	body.on("panleft", menuCerrar);
 
 	$("#Header-buttonAbrir").on("click", menuAbrir);
 	$("#Header-buttonCerrar").on("click", menuCerrar);
