@@ -8,11 +8,12 @@
 	<link rel="stylesheet" href="css/estilos.css"/>
  </head>
  <body>
+ 	<a name="inicio"></a>
 	<header class="Header">
 		<div class="Header-movile">
 			<button class="Header-buttonMenu" id="Header-buttonCerrar">ch</button>
 			<button class="Header-buttonMenu" id="Header-buttonAbrir">hi</button>
-			<h1 class="Header-title">mi perfil</h1>
+			<h1 class="Header-title textTitle">mi perfil</h1>
 		</div>
 		<nav class="Menu mostrar">  
 			<figure class="Menu-figure mostrar">
@@ -20,19 +21,19 @@
 			</figure>
             <ul class="Menu-lista">
                 <li class="Menu-item">
-                    <a class="Menu-link">Inicio</a>
+                    <a class="Menu-link" href="#inicio">Inicio</a>
                 </li>
                 <li class="Menu-item">
-                    <a class="Menu-link">Perfil</a>
+                    <a class="Menu-link" href="#myperfil">Perfil</a>
                 </li>
                 <li class="Menu-item">
-                    <a class="Menu-link">Proyectos</a>
+                    <a class="Menu-link" href="#Proyectos">Proyectos</a>
                 </li>
                 <li class="Menu-item">
-                    <a class="Menu-link">Tecnologias</a>
+                    <a class="Menu-link" href="#Tecnologias">Tecnologias</a>
                 </li>
                 <li class="Menu-item">
-                    <a class="Menu-link">contacto</a>
+                    <a class="Menu-link" href="#contacto">contacto</a>
                 </li>
             </ul>
         </nav>
@@ -41,21 +42,75 @@
         		<img src="img/space.jpg" alt="Avatar">
         	</figure>
         	<div class="Avatar-info">
-        		<h3 class="Avatar-perfil">My Perfil</h3>
+        		<h2 class="Avatar-perfil">My Perfil</h2>
 	        	<h3 class="Avatar-name">Juan Carlos Alfonso Cruz</h3>
 	        	<h5 class="Avatar-work">Frontend and development</h5>
 	        	<p class="Avatar-lema">Todo lo que necesitas crear para un sitio web profesional con imaginacion, 100% libre y dimamica en cualquier dispositivo</p>
         	</div>
-        </article> 
+        </article>
 	</header>
+	<section class="Contenido">
+		<a name="myperfil"></a>
+		<article class="Myperfil">
+			<h2 class="Myperfil-title textTitle">Sobre my</h2>
+			<p class="Myperfil-cont"></p>
+		</article>
+		<a name="Proyectos"></a>
+		<article class="Proyectos">
+			<h2 class="Proyectos-title textTitle">Proyectos</h2>
+			<figure class="Proyectos-proyect">
+				<img src="../img/dev-icon.png" alt="">
+				<figcaption class="Proyectos-info">
+					<h4 class="Proyectos-infoName textTitle">posteando</h4>
+					<p class="Proyectos-infoComment">la web para compartir conocimientos o informacion cualquier tema de tecnologia ya sea de frontend, backend, frameworks, librerias, etc..</p>
+					<a href="http://juankparis.github.io/posteando" class="Proyectos-link" target="_blank">ir la el proyecto</a>
+				</figcaption>
+			</figure>
+			<figure class="Proyectos-proyect">
+				<img src="../img/dev-icon.png" alt="">
+				<figcaption class="Proyectos-info">
+					<h4 class="Proyectos-infoName textTitle">slides</h4>
+					<p class="Proyectos-infoComment">slides en solo CSS3 con diferentes formas y maneras de hacerlo (estas son animaciones aceleradas por hardware)</p>
+					<a href="http://juankparis.github.io/sildes_css" class="Proyectos-link" target="_blank">ir la el proyecto</a>
+				</figcaption>
+			</figure>
+			<figure class="Proyectos-proyect">
+				<img src="../img/dev-icon.png" alt="">
+				<figcaption class="Proyectos-info">
+					<h4 class="Proyectos-infoName textTitle">portafolio</h4>
+					<p class="Proyectos-infoComment">portafolio reposive para cualquertipo de usuario</p>
+					<a href="http://juankparis.github.io/perfilbasico" class="Proyectos-link" target="_blank">ir la el proyecto</a>
+				</figcaption>
+			</figure>
+			<figure class="Proyectos-proyect">
+				<img src="../img/dev-icon.png" alt="">
+				<figcaption class="Proyectos-info">
+					<h4 class="Proyectos-infoName textTitle">red destiny</h4>
+					<p class="Proyectos-infoComment">red social de gamers</p>
+					<a href="http://juankparis.github.io/red_destiny" class="Proyectos-link" target="_blank">ir la el proyecto</a>
+				</figcaption>
+			</figure>
+			<figure class="Proyectos-proyect">
+				<img src="../img/dev-icon.png" alt="">
+				<figcaption class="Proyectos-info">
+					<h4 class="Proyectos-infoName textTitle">personalizacion</h4>
+					<p class="Proyectos-infoComment">escoge el color, llantas, y techo de tu carro</p>
+					<a href="http://juankparis.github.io/frontend_basico1eje" class="Proyectos-link" target="_blank">ir la el proyecto</a>
+				</figcaption>
+			</figure>
+			<figure class="Proyectos-proyect">
+				<img src="../img/dev-icon.png" alt="">
+				<figcaption class="Proyectos-info">
+					<h4 class="Proyectos-infoName textTitle">nombre proyecto</h4>
+					<p class="Proyectos-infoComment">informacion del proyecto y sus tecnologias usadas</p>
+					<a href="http://juankparis.github.io/sildes_css" class="Proyectos-link" target="_blank">ir la el proyecto</a>
+				</figcaption>
+			</figure>
+		</article>
+		<a name="Tecnologias"></a>
+	</section>
+	<a name="contacto"></a>
 	<footer class="Footer">
-		<h3>d</h3>
-		<h1>dfdfgd</h1>
-		<h2>ddfvd</h2>
-		<h3>d</h3>
-		<h3>d</h3>
-		<h3>d</h3>
-		<h3>d</h3>
 	</footer>
 	<script src="js/lib/jquery-1.11.3.min.js"></script>
 	<script src="js/lib/hammer.min.js"></script>

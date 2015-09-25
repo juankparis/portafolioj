@@ -1,0 +1,73 @@
+/*variables de colores*/
+
+gris_obscuro_a = hsl(240, 5%, 16%)
+gris_obscuro_b = rgba(18, 18, 18, .75)
+gris_obscuro = #999
+/*triada de colores*/
+azul_baseClaro =#246ECC
+azul_baseObscuro =#175BB2
+rojo_ladrillo = #FF2B14
+amarillo_claro =#D8FF2E
+rojo_abscuro =#B22E20
+/*fin variables de colores */
+
+.Proyectos
+	// poner una imagen clara para que resalte
+	background url("../img/space.jpg")
+	background-attachment fixed
+	background-size cover
+	display flex
+	flex-wrap wrap
+	justify-content space-around
+	&-title
+		padding 1em
+		text-align center
+		width 100%
+	&-proyect
+		background gris_obscuro_b
+		border-radius 0.5em
+		box-shadow rgb(white) 0px 0px 9px
+		cursor pointer
+		margin 0.5em 0.5em 1em 0.5em
+		max-width 400px
+		min-width 300px
+		position: relative
+		&:hover > .Proyectos-info
+			opacity 1
+			transform scale(1)
+		img
+			width 100%
+	&-info
+		background gris_obscuro_b
+		border-radius 0.5em
+		height 100%
+		left 1em
+		max-width 400px
+		opacity 0
+		position absolute
+		text-align center
+		top 1em
+		transform scale(0)
+		transition all 0.3s ease
+		width 100%
+	&-infoName
+		padding 0.5em 0
+		color rojo_abscuro
+	&-infoComment
+		padding 0 1em
+	&-link
+		position relative
+		top 105px
+		background rojo_abscuro
+		padding 1em
+		margin 2em
+		text-shadow rgb(gris_obscuro_a) 3px 3px 5px
+		border-radius 0.2em
+		color white
+		text-decoration none
+		box-shadow rgb(gris_obscuro_a) 5px 5px 7px
+						
+@media screen and (min-width:650px)
+	.Proyectos
+		&-proyect
+			width 300px
