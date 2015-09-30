@@ -1,12 +1,15 @@
 @import "nib"
 @import "normalize.styl"
+@import "fonts.styl"
+@import "Myperfil.styl"
 @import "proyectos.styl"
 
 /*variables de colores*/
 
 gris_obscuro_a = hsl(240, 5%, 16%)
-gris_obscuro_b = rgba(18, 18, 18, .75)
-gris_obscuro = #999
+gris_obscuro_b = hsl(240, 7%, 11%)
+gris_obscuro_trasp = rgba(18, 18, 18, .75)
+// gris_obscuro = #999
 /*triada de colores*/
 azul_baseClaro =#246ECC
 azul_baseObscuro =#175BB2
@@ -19,7 +22,6 @@ rojo_abscuro =#B22E20
 html, body 
 	background rgba(77, 77, 77, 1)
 	background linear-gradient(135deg, rgba(89, 89, 89, 1) 0%, rgba(18, 18, 18, 1) 12%, rgba(89, 89, 89, 1) 20%,rgba(77, 77, 77, 1) 25%,rgba(89, 89, 89, 1) 40%,rgba(18, 18, 18, .1) 70%, rgba(89, 89, 89, 1) 80%, rgba(18, 18, 18, 1) 88%, rgba(89, 89, 89, 1) 100%)
-	// background gris_obscuro_a
 	font-family 'Exo', sans-serif 
 	font-size 16px
 	color white
@@ -36,6 +38,9 @@ html, body
 .textTitle
 	font-size 1.5em
 	font-style italic
+.utility-iconfirsrt
+	color rojo_abscuro
+	font-size 2em
 /*</utilidades*/
 
 /*Header*/
@@ -46,7 +51,6 @@ html, body
 	height 100%
 	max-width 100%
 	&-movile
-		background rgba(gris_obscuro, .2)
 		border-bottom 1px solid azul_baseClaro
 		margin 0 2em
 		overflow: hidden
@@ -141,16 +145,6 @@ html, body
 		margin 1em 0.5em 0 0.5em
 /*</Avatar*/
 
-/*myperfil*/
-.Myperfil
-	background url("../img/space.jpg")
-	// background-size cover
-	border-top 1px solid azul_baseClaro
-	border-bottom 1px solid azul_baseClaro
-	padding 0.5em
-	text-align center	
-/*</myperfil*/
-
 @media screen and (min-width:720px)
 	.Header-movile
 		display none
@@ -163,7 +157,7 @@ html, body
 		position fixed		
 		width 100%
 		&-figure
-			border 1px solid gris_obscuro
+			border 1px solid gris_obscuro_a
 			border-radius 50%
 			display inline-block
 			height 40px
@@ -211,6 +205,3 @@ html, body
 			max-width 28em
 			font-size 1rem
 	/*</Avatar*/
-
-	/*Myperfil*/
-	/*</Myperfil*/	
