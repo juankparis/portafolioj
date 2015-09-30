@@ -1,0 +1,48 @@
+/*variables de colores*/
+
+gris_obscuro_a = hsl(240, 5%, 16%)
+gris_obscuro_b = hsl(240, 7%, 11%)
+gris_obscuro_trasp = rgba(18, 18, 18, .75)
+
+/*triada de colores*/
+azul_baseClaro =#246ECC
+azul_baseObscuro =#175BB2
+rojo_ladrillo = #FF2B14
+amarillo_claro =#D8FF2E
+rojo_abscuro =#B22E20
+/*fin variables de colores */
+
+/*myperfil*/
+.Myperfil
+	background linear-gradient(180deg, gris_obscuro_a 0%, gris_obscuro_b 80% )
+	border-top 1px solid azul_baseClaro
+	padding 2em
+	text-align center
+	&-present
+		padding 1em 0 2em 0
+	&-contSection
+		border-bottom 1px solid azul_baseClaro
+		margin 1em
+		text-align left
+	&-contText,
+	&-contIcon
+		display inline-block
+		vertical-align top
+	&-contText
+		min-height 4em
+		max-width 80%
+	&-contIcon
+		font-size 3em
+		color azul_baseObscuro
+
+@media screen and (min-width: 720px)
+	.Myperfil
+		&-cont
+			display inline-block
+			vertical-align top
+			max-width 47%
+		&-contSection
+			display block
+			vertical-align top
+			max-width 100%
+/*</myperfil*/
