@@ -1,11 +1,12 @@
 $(function(){
+
 	//gestos touch
 	var $body = document.querySelector("body");
 	var body = new Hammer($body);
 
 	body.on("panright", menuAbrir);
 	body.on("panleft", menuCerrar);
-
+    //nav
 	$("#Header-buttonAbrir").on("click", menuAbrir);
 	$("#Header-buttonCerrar").on("click", menuCerrar);
 
@@ -17,11 +18,34 @@ $(function(){
 		$(".Menu").removeClass("Menu-isActive");
 		$("#Header-buttonCerrar").removeClass("mostrar");
 	}
+	//proyectos
+	$("#Proyectos-buttonAbrir").on("click", proyectosAbrir);
+	$("#Proyectos-buttonCerrar").on("click", proyectosCerrar);
+
+	function proyectosAbrir(){
+		$("#Proyectos-buttonCerrar").addClass("mostrar");
+		$("#Proyectos-mas").slideDown("slow");
+		$(".Despliege").animate({
+			"top": 0,
+			"opacity": 1
+			});
+		$("#Proyectos-mas").css({display:"flex"});
+		return false;
+	}
+	function proyectosCerrar(){
+		$("#Proyectos-buttonCerrar").removeClass("mostrar");
+		$("#Proyectos-mas").delay(220).slideUp("slow");
+		$(".Despliege").animate({
+			"top": -1000,
+			"opacity": 0
+			});
+		return false;
+	}
 
 	//genera el el efecto de ondulacion en el sistema de navegagion
 	var pariente, Menulink, diametro, x, y;
 
-	$(".Menu-link").click(function(e){
+	$(".ondulacion").click(function(e){
 		pariente = $(this).parent();
 	//si el elemento span no exsiste agregelo con la clase .Menu-animac
 	if(pariente.find(".Menu-animac").length == 0){
@@ -49,4 +73,5 @@ $(function(){
 	//pasa la posicion en (y,x) y anñade la clase Menuanimate (se la pasa al Menu link por eso es necesario poner el position absolute en el)
 	Menulink.css({top: y+'px', left: x+'px'}).addClass("Menu-animate");
 	});
+
 });

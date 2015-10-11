@@ -1,8 +1,13 @@
 /*variables de colores*/
 
 gris_obscuro_a = hsl(240, 5%, 16%)
+gris_obscuro_b = hsl(240, 7%, 11%)
+gris_obscuro_c = hsl(0, 0%, 26%)	//hsl(199, 10%, 47%)
+gris_obscuro_d = hsl(0, 0%, 20%)    //hsl(199, 12%, 42%)
 gris_obscuro_trasp = rgba(18, 18, 18, .75)
-gris_obscuro = #999
+gris_claro_a = hsl(0, 0%, 44%)    
+gris_claro_b = hsl(0, 0%, 38%)   
+
 /*triada de colores*/
 azul_baseClaro =#246ECC
 azul_baseObscuro =#175BB2
@@ -12,10 +17,9 @@ rojo_abscuro =#B22E20
 /*fin variables de colores */
 
 .Proyectos
-	// poner una imagen clara para que resalte
-	background url("../img/space.jpg")
+	background radial-gradient( gris_claro_a 0%, gris_claro_b 20%, gris_obscuro_c 40%, gris_obscuro_d 60%, gris_claro_b 80%, gris_claro_a 100%)
+	// background url("../img/2.jpg")
 	background-attachment fixed
-	background-size cover
 	display flex
 	flex-wrap wrap
 	justify-content space-around
@@ -24,19 +28,31 @@ rojo_abscuro =#B22E20
 		text-align center
 		width 100%
 	&-proyect
-		background gris_obscuro_trasp
-		border-radius 0.5em
-		box-shadow rgb(white) 0px 0px 9px
+		background url("../img/poryectos.png")
+		background-position center
+		background-repeat no-repeat
+		background-size cover
+		border-radius 0 0 0.5em 0.5em
+		border-bottom 5px solid gris_obscuro_trasp
+		box-shadow rgb(gris_obscuro_a) 0px 0px 16px
 		cursor pointer
 		margin 0.5em 0.5em 1em 0.5em
 		max-width 400px
-		min-width 300px
+		width 90%
+		min-height 200px
+		max-height 300px
 		position: relative
 		&:hover > .Proyectos-info
 			opacity 1
 			transform scale(1)
 		img
 			width 100%
+	&-icon
+		text-align center
+		font-size 3em
+		text-shadow azul_baseClaro 0 0 10px
+		line-height 4em
+		
 	&-info
 		background gris_obscuro_trasp
 		border-radius 0.5em
@@ -56,18 +72,66 @@ rojo_abscuro =#B22E20
 	&-infoComment
 		padding 0 1em
 	&-link
-		position relative
-		top 105px
 		background rojo_abscuro
-		padding 1em
-		margin 2em
-		text-shadow rgb(gris_obscuro_a) 3px 3px 5px
 		border-radius 0.2em
-		color white
-		text-decoration none
 		box-shadow rgb(gris_obscuro_a) 5px 5px 7px
-						
+		color white
+		margin 2em
+		padding 1em
+		position relative
+		text-decoration none
+		text-shadow rgb(gris_obscuro_a) 3px 3px 5px
+		top 20px
+	&-link:hover
+		font-size 1.03em
+	&-nav
+		border-bottom 1px solid azul_baseClaro
+		background linear-gradient(180deg, gris_obscuro_a 0%, gris_obscuro_b 80% )
+		height 3.5em
+		overflow: hidden
+		position relative
+	&-more
+		font-style italic
+		line-height 3.5em
+		padding-left 1em
+	&-button
+		background linear-gradient(180deg, gris_obscuro_a 0%, gris_obscuro_b 80% )
+		border 1px solid azul_baseClaro
+		border-radius 0.3em
+		color azul_baseClaro
+		padding 0.5em 1em
+		position absolute
+		right 1em
+		text-align center
+		top 0.5em
+		width 150px
+
+.Proyectos-mas
+	background radial-gradient( gris_claro_a 0%, gris_claro_b 20%, gris_obscuro_c 40%, gris_obscuro_d 60%, gris_claro_b 80%, gris_claro_a 100%)
+	background url("../img/fondoporyectos.jpg")
+	background-attachment fixed
+	background-position center
+	background-repeat: no-repeat
+	background-size cover
+	display none
+	flex-wrap wrap
+	justify-content space-around
+	overflow hidden
+
+.Despliege
+	opacity 0
+	top -1000px
+	transition 0.5s ease
+	
 @media screen and (min-width:650px)
-	.Proyectos
-		&-proyect
-			width 300px
+	.Proyectos-proyect
+		max-width 300px
+
+@media screen and (min-width:1090px)
+	.Proyectos,
+	.Proyectos-mas
+		padding 0 4em
+
+		
+	.Despliege
+		transition .8s ease
