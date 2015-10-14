@@ -12,18 +12,18 @@ $(function(){
 
 	function menuAbrir(){
 		$(".Menu").addClass("Menu-isActive");
-		$("#Header-buttonCerrar").addClass("mostrar");
+		$("#Header-buttonCerrar").addClass("U-mostrar");
 	}
 	function menuCerrar(){
 		$(".Menu").removeClass("Menu-isActive");
-		$("#Header-buttonCerrar").removeClass("mostrar");
+		$("#Header-buttonCerrar").removeClass("U-mostrar");
 	}
 	//proyectos
 	$("#Proyectos-buttonAbrir").on("click", proyectosAbrir);
 	$("#Proyectos-buttonCerrar").on("click", proyectosCerrar);
 
 	function proyectosAbrir(){
-		$("#Proyectos-buttonCerrar").addClass("mostrar");
+		$("#Proyectos-buttonCerrar").addClass("U-mostrar");
 		$("#Proyectos-mas").slideDown("slow");
 		$(".Despliege").animate({
 			"top": 0,
@@ -33,7 +33,7 @@ $(function(){
 		return false;
 	}
 	function proyectosCerrar(){
-		$("#Proyectos-buttonCerrar").removeClass("mostrar");
+		$("#Proyectos-buttonCerrar").removeClass("U-mostrar");
 		$("#Proyectos-mas").delay(220).slideUp("slow");
 		$(".Despliege").animate({
 			"top": -1000,

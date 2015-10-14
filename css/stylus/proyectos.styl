@@ -4,7 +4,7 @@ gris_obscuro_a = hsl(240, 5%, 16%)
 gris_obscuro_b = hsl(240, 7%, 11%)
 gris_obscuro_c = hsl(0, 0%, 26%)	//hsl(199, 10%, 47%)
 gris_obscuro_d = hsl(0, 0%, 20%)    //hsl(199, 12%, 42%)
-gris_obscuro_trasp = rgba(18, 18, 18, .75)
+gris_obscuro_trasp = rgba(18, 18, 18, .7)
 gris_claro_a = hsl(0, 0%, 44%)    
 gris_claro_b = hsl(0, 0%, 38%)   
 
@@ -18,41 +18,35 @@ rojo_abscuro =#B22E20
 
 .Proyectos
 	background radial-gradient( gris_claro_a 0%, gris_claro_b 20%, gris_obscuro_c 40%, gris_obscuro_d 60%, gris_claro_b 80%, gris_claro_a 100%)
-	// background url("../img/2.jpg")
 	background-attachment fixed
 	display flex
 	flex-wrap wrap
 	justify-content space-around
-	&-title
-		padding 1em
-		text-align center
-		width 100%
 	&-proyect
 		background url("../img/poryectos.png")
 		background-position center
 		background-repeat no-repeat
 		background-size cover
-		border-radius 0 0 0.5em 0.5em
 		border-bottom 5px solid gris_obscuro_trasp
+		border-radius 0 0 0.5em 0.5em
 		box-shadow rgb(gris_obscuro_a) 0px 0px 16px
 		cursor pointer
 		margin 0.5em 0.5em 1em 0.5em
-		max-width 400px
-		width 90%
-		min-height 200px
 		max-height 300px
+		max-width 400px
+		min-height 200px
 		position: relative
+		width 90%
 		&:hover > .Proyectos-info
 			opacity 1
 			transform scale(1)
 		img
 			width 100%
 	&-icon
-		text-align center
 		font-size 3em
-		text-shadow azul_baseClaro 0 0 10px
 		line-height 4em
-		
+		text-align center
+		text-shadow azul_baseClaro 0 0 10px
 	&-info
 		background gris_obscuro_trasp
 		border-radius 0.5em
@@ -67,8 +61,8 @@ rojo_abscuro =#B22E20
 		transition all 0.3s ease
 		width 100%
 	&-infoName
-		padding 0.5em 0
 		color rojo_abscuro
+		padding 0.5em 0
 	&-infoComment
 		padding 0 1em
 	&-link
@@ -85,8 +79,8 @@ rojo_abscuro =#B22E20
 	&-link:hover
 		font-size 1.03em
 	&-nav
-		border-bottom 1px solid azul_baseClaro
 		background linear-gradient(180deg, gris_obscuro_a 0%, gris_obscuro_b 80% )
+		border-bottom 1px solid azul_baseClaro
 		height 3.5em
 		overflow: hidden
 		position relative
