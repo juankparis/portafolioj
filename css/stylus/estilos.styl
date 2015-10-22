@@ -3,7 +3,7 @@
 @import "fonts.styl"
 @import "Myperfil.styl"
 @import "proyectos.styl"
-// @import "tecnologias.styl"
+@import "tecnologias.styl"
 
 /*variables de colores*/
 
@@ -37,6 +37,8 @@ html, body
 	z-index: 5
 .U-opacity
 	opacity 1
+.U-top
+	top -1000px
 .U-textTitle
 	font-size 1.5em
 	font-style italic
@@ -52,6 +54,27 @@ html, body
 	width 100%
 .U-textGray
 	color gris_claro_a
+.U-navSegundarios
+	background linear-gradient(180deg, gris_obscuro_a 0%, gris_obscuro_b 80% )
+	border-bottom 1px solid azul_baseClaro
+	height 3.5em
+	overflow: hidden
+	position relative
+	&-more
+		font-style italic
+		line-height 3.5em
+		padding-left 1em
+	&-button
+		background linear-gradient(180deg, gris_obscuro_a 0%, gris_obscuro_b 80% )
+		border 1px solid azul_baseClaro
+		border-radius 0.3em
+		color azul_baseClaro
+		padding 0.5em 1em
+		position absolute
+		right 1em
+		text-align center
+		top 0.5em
+		width 150px
 /*</utilidades*/
 
 /*Header*/
@@ -182,12 +205,12 @@ html, body
 		font-size 0
 	&-galeriaContImg
 		flex auto
-		width 170px
 		height 170px
 		overflow hidden
+		width 170px
 		img
-			width 100%
 			min-height 170px
+			width 100%
 /*</galeria*/
 
 /*responsiveImage*/
@@ -283,12 +306,12 @@ html, body
 	.GaleriaConTotal
 		padding-bottom 5em
 		&-galeriaCont
-			max-width 720px
 			margin 0 auto
+			max-width 720px
 	/*</galeria*/
 @media screen and (min-width:1000px)
 	/*galeria*/
 	.GaleriaConTotal-galeriaCont
-		max-width 1000px
 		margin 0 auto
+		max-width 1000px
 	/*</galeria*/

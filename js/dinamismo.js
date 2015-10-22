@@ -18,6 +18,7 @@ $(function(){
 		$(".Menu").removeClass("Menu-isActive");
 		$("#Header-buttonCerrar").removeClass("U-mostrar");
 	}
+	// </nav
 	//proyectos
 	$("#Proyectos-buttonAbrir").on("click", proyectosAbrir);
 	$("#Proyectos-buttonCerrar").on("click", proyectosCerrar);
@@ -25,7 +26,7 @@ $(function(){
 	function proyectosAbrir(){
 		$("#Proyectos-buttonCerrar").addClass("U-mostrar");
 		$("#Proyectos-mas").slideDown("slow");
-		$(".Despliege").animate({
+		$(".Proyectos-masDespliege").animate({
 			"top": 0,
 			"opacity": 1
 			});
@@ -35,12 +36,36 @@ $(function(){
 	function proyectosCerrar(){
 		$("#Proyectos-buttonCerrar").removeClass("U-mostrar");
 		$("#Proyectos-mas").delay(220).slideUp("slow");
-		$(".Despliege").animate({
+		$(".Proyectos-masDespliege").animate({
 			"top": -1000,
 			"opacity": 0
 			});
 		return false;
 	}
+	// </Proyectos
+	// Tecnologias
+	$("#Tecnologias-buttonAbrir").on("click", tecnologiasAbrir);
+	$("#Tecnologias-buttonCerrar").on("click", tecnologiasCerrar);
+
+	function tecnologiasAbrir(){
+		$("#Tecnologias-buttonCerrar").addClass("U-mostrar");
+		$("#Tecnologias-mas").slideDown("slow");
+		$(".Tecnologias-masDespliege").animate({
+			"top": 0,
+			"opacity": 1
+			});
+	}
+	function tecnologiasCerrar(){
+		$("#Tecnologias-buttonCerrar").removeClass("U-mostrar");
+		$("#Tecnologias-mas").delay(270).slideUp("slow");
+		$(".Tecnologias-masDespliege").animate({
+			"opacity": 0,
+			"top": -1000
+		});
+		return false;
+
+	}
+	// </Tecnologias
 
 	//genera el el efecto de ondulacion en el sistema de navegagion
 	var pariente, Menulink, diametro, x, y;

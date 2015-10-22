@@ -78,28 +78,7 @@ rojo_abscuro =#B22E20
 		top 20px
 	&-link:hover
 		font-size 1.03em
-	&-nav
-		background linear-gradient(180deg, gris_obscuro_a 0%, gris_obscuro_b 80% )
-		border-bottom 1px solid azul_baseClaro
-		height 3.5em
-		overflow: hidden
-		position relative
-	&-more
-		font-style italic
-		line-height 3.5em
-		padding-left 1em
-	&-button
-		background linear-gradient(180deg, gris_obscuro_a 0%, gris_obscuro_b 80% )
-		border 1px solid azul_baseClaro
-		border-radius 0.3em
-		color azul_baseClaro
-		padding 0.5em 1em
-		position absolute
-		right 1em
-		text-align center
-		top 0.5em
-		width 150px
-
+	
 .Proyectos-mas
 	background radial-gradient( gris_claro_a 0%, gris_claro_b 20%, gris_obscuro_c 40%, gris_obscuro_d 60%, gris_claro_b 80%, gris_claro_a 100%)
 	background url("../img/fondoporyectos.jpg")
@@ -111,15 +90,15 @@ rojo_abscuro =#B22E20
 	flex-wrap wrap
 	justify-content space-around
 	overflow hidden
-
-.Despliege
-	opacity 0
-	top -1000px
-	transition 0.5s ease
+	&Despliege
+		opacity 0
+		top -1000px
+		transition 0.5s ease
 	
 @media screen and (min-width:650px)
 	.Proyectos-proyect
 		max-width 300px
+		max-height 200px
 
 @media screen and (min-width:1090px)
 	.Proyectos,
