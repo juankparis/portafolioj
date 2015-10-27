@@ -12,7 +12,7 @@ gris_obscuro_b = hsl(240, 7%, 11%)
 gris_obscuro_c = hsl(0, 0%, 26%)	//hsl(199, 10%, 47%)
 gris_obscuro_d = hsl(0, 0%, 20%)    //hsl(199, 12%, 42%)
 gris_obscuro_trasp = rgba(18, 18, 18, .7)
-gris_claro_a = hsl(0, 0%, 44%)    
+gris_claro_a = hsl(0, 0%, 44%)
 gris_claro_b = hsl(0, 0%, 38%)   
 
 /*triada de colores*/
@@ -33,6 +33,12 @@ html, body
 /*</estilos base*/
 
 /*utilidades*/
+.U-scaleCeroCerrar
+	transform rotate(360deg) scale(0)
+.U-scaleUno
+	transform scale(1)
+.U-scaleCeroAbrir
+	transform rotate(360deg) scale(0)
 .U-mostrar
 	z-index: 5
 .U-opacity
@@ -47,10 +53,11 @@ html, body
 	text-align center
 	width 100%
 .U-iconPrincipal
-	color rojo_abscuro
-	font-size 2em
-	margin-bottom 1em
+	color white
+	font-size 2.5em
+	margin-bottom 0.5em
 	text-align center
+	text-shadow 0 0 15px azul_baseObscuro
 	width 100%
 .U-textGray
 	color gris_claro_a
@@ -98,15 +105,17 @@ html, body
 		margin 0
 		padding-left 0.5
 	&-buttonMenu
+		background transparent
+		border none
 		border-radius 0.5em
-		line-height 2em
-		margin 1em 0.6em 0 0
+		color white
+		font-size 3em
+		margin 0.2em 0.2em 0 0
 		position absolute
 		right 0
 		top 0
-		transition all 0.3s ease
-		&:hover
-			transform rotate(360deg)
+		transition all 0.5s ease
+		text-shadow 1px 1px 10px azul_baseObscuro
 
 /*navegacion responsive*/
 .Menu
@@ -227,7 +236,19 @@ html, body
 		img
 			width 100%
 /*</responsiveImage*/
+/*redes*/
+.redes
+	margin-bottom 0.3em
+	&-item
+		display inline-block
+		list-style none
+		a
+			color azul_baseObscuro
+			font-size 1.5em
+			margin 0 0.3em
+			text-decoration none
 
+/*</redes*/
 /*Footer*/
 .Footer
 	background linear-gradient(180deg, gris_obscuro_a 0%, gris_obscuro_b 80% )

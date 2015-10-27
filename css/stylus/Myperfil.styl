@@ -20,7 +20,7 @@ rojo_abscuro =#B22E20
 .Myperfil
 	background linear-gradient(180deg, gris_obscuro_a 0%, gris_obscuro_b 80% )
 	border-top 1px solid azul_baseClaro
-	padding 2em
+	padding 0 1em 1em 1em
 	text-align center
 	&-present
 		padding-bottom 2em
@@ -31,13 +31,17 @@ rojo_abscuro =#B22E20
 	&-contText,
 	&-contIcon
 		display inline-block
-		vertical-align top
+		vertical-align inherit
 	&-contText
-		max-width 80%
-		min-height 4em
+		margin 0 0 1em 0.3em
+		max-width 79%
+		// min-height 4em
 	&-contIcon
 		color azul_baseObscuro
 		font-size 3em
+@media screen and (min-width: 480px)
+	.Myperfil
+		padding 0 2em 2em 2em
 
 @media screen and (min-width: 720px)
 	.Myperfil

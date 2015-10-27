@@ -12,11 +12,13 @@ $(function(){
 
 	function menuAbrir(){
 		$(".Menu").addClass("Menu-isActive");
-		$("#Header-buttonCerrar").addClass("U-mostrar");
+		$("#Header-buttonAbrir").addClass("U-scaleCeroAbrir");
+		$("#Header-buttonCerrar").delay(2000).addClass("U-scaleUno");
 	}
 	function menuCerrar(){
 		$(".Menu").removeClass("Menu-isActive");
-		$("#Header-buttonCerrar").removeClass("U-mostrar");
+		$("#Header-buttonCerrar").removeClass("U-scaleUno");
+		$("#Header-buttonAbrir").delay(2000).removeClass("U-scaleCeroAbrir");
 	}
 	// </nav
 	//proyectos
