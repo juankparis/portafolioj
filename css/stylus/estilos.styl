@@ -36,7 +36,9 @@ html, body
 .U-scaleCeroCerrar
 	transform rotate(360deg) scale(0)
 .U-scaleUno
-	transform scale(1)
+	transform rotate(0deg) scale(1)
+	/*si se cambia el orden de scale 0 y 1 de U-scaleCeroCerrar U-scaleCeroAbrir hace una animacion diferente*/
+	/*sin el rotate cero no sirve en algunos navegadores*/
 .U-scaleCeroAbrir
 	transform rotate(360deg) scale(0)
 .U-mostrar
