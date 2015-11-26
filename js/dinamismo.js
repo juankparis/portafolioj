@@ -32,7 +32,6 @@ $(function(){
 			"top": 0,
 			"opacity": 1
 			});
-		$("#Proyectos-mas").css({display:"flex"});
 		return false;
 	}
 	function proyectosCerrar(){

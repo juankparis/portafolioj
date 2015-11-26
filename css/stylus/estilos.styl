@@ -4,6 +4,7 @@
 @import "Myperfil.styl"
 @import "proyectos.styl"
 @import "tecnologias.styl"
+@import "diplomas.styl"
 
 /*variables de colores*/
 
@@ -41,6 +42,8 @@ html, body
 	/*sin el rotate cero no sirve en algunos navegadores*/
 .U-scaleCeroAbrir
 	transform rotate(360deg) scale(0)
+.U-displayNone
+	display none
 .U-mostrar
 	z-index: 5
 .U-opacity
@@ -126,7 +129,7 @@ html, body
 	position absolute
 	top 0
 	transition all 0.3s ease
-	z-index: 6
+	z-index: 10
 	&-figure
 		display none
 		transition all 0.3s ease
