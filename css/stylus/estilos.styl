@@ -18,6 +18,7 @@ gris_claro_b = hsl(0, 0%, 38%)
 
 /*triada de colores*/
 azul_baseClaro =#246ECC
+azul_basemedio =#1565C0
 azul_baseObscuro =#175BB2
 rojo_ladrillo = #FF2B14
 amarillo_claro =#D8FF2E
@@ -241,6 +242,51 @@ html, body
 		img
 			width 100%
 /*</responsiveImage*/
+/*<codepen>*/
+.Codepen
+	background azul_basemedio
+	padding 2em
+	text-align center
+	box-sizing border-box
+	height 200px
+	& p
+		text-shadow 2px 2px 2px gris_claro_b
+	& a
+		color white
+		text-decoration none
+	&-cont
+		background azul_baseClaro
+		border 1px solid azul_baseObscuro
+		font-size 1.5rem
+		font-style italic
+		left -9px
+		margin 0 auto
+		margin-bottom 1rem
+		max-width 720px
+		min-width 278px
+		padding 1em 0rem
+		position relative
+		top 0
+		transition all 0.3s ease
+		//sombra de la caja en 3d
+		box-shadow 1px 0px 0px azul_baseObscuro, 0px 1px 0px azul_baseObscuro,
+				   2px 1px 0px azul_baseObscuro, 1px 2px 0px azul_baseObscuro,
+				   3px 2px 0px azul_baseObscuro, 2px 3px 0px azul_baseObscuro,
+  				   4px 3px 0px azul_baseObscuro, 3px 4px 0px azul_baseObscuro,
+  				   5px 4px 0px azul_baseObscuro, 4px 5px 0px azul_baseObscuro,
+  			       6px 5px 0px azul_baseObscuro, 5px 6px 0px azul_baseObscuro,
+  				   7px 6px 0px azul_baseObscuro, 6px 7px 0px azul_baseObscuro,
+  			       8px 7px 0px azul_baseObscuro, 7px 8px 0px azul_baseObscuro,
+  			       9px 8px 0px azul_baseObscuro, 8px 9px 0px azul_baseObscuro
+		& span
+			font-size 2rem
+			font-style italic
+		&:hover
+			box-shadow 0px 0px 0px azul_baseObscuro
+			top 9px
+			left 0px
+
+/*</codepen>*/
 /*redes*/
 .redes
 	margin-bottom 0.3em
