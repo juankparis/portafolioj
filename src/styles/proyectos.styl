@@ -1,0 +1,112 @@
+/*variables de colores*/
+
+gris_obscuro_a = hsl(240, 5%, 16%)
+gris_obscuro_b = hsl(240, 7%, 11%)
+gris_obscuro_c = hsl(0, 0%, 26%)	//hsl(199, 10%, 47%)
+gris_obscuro_d = hsl(0, 0%, 20%)    //hsl(199, 12%, 42%)
+gris_obscuro_trasp = rgba(18, 18, 18, .7)
+gris_claro_a = hsl(0, 0%, 44%)    
+gris_claro_b = hsl(0, 0%, 38%)   
+
+/*triada de colores*/
+azul_baseClaro =#246ECC
+azul_baseObscuro =#175BB2
+rojo_ladrillo = #FF2B14
+amarillo_claro =#D8FF2E
+rojo_abscuro =#B22E20
+/*fin variables de colores */
+
+.Proyectos
+	background radial-gradient( gris_claro_a 0%, gris_claro_b 20%, gris_obscuro_c 40%, gris_obscuro_d 60%, gris_claro_b 80%, gris_claro_a 100%)
+	background-attachment fixed
+	display flex
+	flex-wrap wrap
+	justify-content space-around
+	&-proyect
+		background url("./dist/img/poryectos.png")
+		background-position center
+		background-repeat no-repeat
+		background-size cover
+		border-bottom 5px solid gris_obscuro_trasp
+		border-radius 0 0 0.5em 0.5em
+		box-shadow rgb(gris_obscuro_a) 0px 0px 16px
+		cursor pointer
+		margin 0.5em 0.5em 1em 0.5em
+		max-height 300px
+		max-width 400px
+		min-height 200px
+		position: relative
+		width 90%
+		&:hover > .Proyectos-info
+			opacity 1
+			transform scale(1)
+		img
+			width 100%
+	&-icon
+		font-size 3em
+		line-height 4em
+		text-align center
+		text-shadow azul_baseClaro 0 0 10px
+	&-info
+		background gris_obscuro_trasp
+		border-radius 0.5em
+		height 100%
+		left 1em
+		max-width 400px
+		opacity 0
+		position absolute
+		text-align center
+		top 1em
+		transform scale(0)
+		transition all 0.3s ease
+		width 100%
+	&-infoName
+		color rojo_abscuro
+		padding 0.5em 0
+	&-infoComment
+		padding 0 1em
+	&-link
+		background rojo_abscuro
+		border-radius 0.2em
+		box-shadow rgb(gris_obscuro_a) 5px 5px 7px
+		color white
+		margin 2em
+		padding 1em
+		position relative
+		text-decoration none
+		text-shadow rgb(gris_obscuro_a) 3px 3px 5px
+		top 20px
+	&-link:hover
+		font-size 1.03em
+	
+.Proyectos-mas
+	background radial-gradient( gris_claro_a 0%, gris_claro_b 20%, gris_obscuro_c 40%, gris_obscuro_d 60%, gris_claro_b 80%, gris_claro_a 100%)
+	background url("./dist/img/fondoporyectos.jpg")
+	background-attachment fixed
+	background-position center
+	background-repeat: no-repeat
+	background-size cover
+	display none
+	overflow hidden
+	&Cont
+		display flex
+		flex-wrap wrap
+		justify-content space-around
+	&Despliege
+		opacity 0
+		top -1000px
+		transition 0.5s ease
+	
+@media screen and (min-width:650px)
+	.Proyectos-proyect
+		max-width 300px
+		max-height 200px
+
+@media screen and (min-width:1090px)
+	.Proyectos,
+	.Proyectos-mas
+		padding 0 4em
+
+		
+	.Despliege
+		transition .8s ease
