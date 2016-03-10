@@ -75,8 +75,8 @@ gulp.task('imgop', function(){
 	gulp.src(config.images.watch)
 		.pipe(imagesop({
 			optimizationLevel: 5,
-	        progressive: true,
-	        interlaced: true
+			progressive: true,
+			interlaced: true
 		}))
 		.pipe(gulp.dest(config.images.output))
 });
@@ -86,15 +86,9 @@ gulp.task('smoos', function(){
 		.pipe(smoosher())
 		.pipe(gulp.dest(config.smoosher.output));
 });
-//por el momento no lo estoy utilizando
-// gulp.task('dist:html', function(){
-// 	return gulp.src(config.html.main)
-// 		.pipe(minifyHTML())
-// 		.pipe(gulp.src(config.html.output));
-// });
 
-gulp.task('watch', function(){
-	gulp.watch(config.styles.watch, ['build:css']);
+gulp.task('watch', function() {
+    gulp.watch(config.styles.watch, ['build:css']);
 	gulp.watch(config.scripts.watch, ['build:js']);
 	gulp.watch(config.images.watch, ['imgop']);
 	gulp.watch(config.smoosher.watch, ['smoos']);
@@ -102,4 +96,11 @@ gulp.task('watch', function(){
 
 gulp.task('build', ['build:css','build:js','imgop','smoos'])
 
-gulp.task('default', ['server','watch','build']);
+gulp.task('default', ['server','build','watch']);
+
+//por el momento no lo estoy utilizando
+// gulp.task('dist:html', function(){
+// 	return gulp.src(config.html.main)
+// 		.pipe(minifyHTML())
+// 		.pipe(gulp.src(config.html.output));
+// });
