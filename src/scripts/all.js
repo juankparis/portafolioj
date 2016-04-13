@@ -20,6 +20,9 @@ $(function(){
 	var loadCSS = require('./lib/loadCSS'); 
 	loadCSS('https://fonts.googleapis.com/css?family=Exo:400,100italic');
 
+	var loadHeadImg =require('./lib/loadHeadImg');
+	loadHeadImg('./dist/img/juan300.jpg');
+
 	//modulo de efecto de ondulacio en el click
 	var ondulacion = require('./lib/ondulacion');
 	ondulacion();
